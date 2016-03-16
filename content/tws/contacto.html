@@ -55,20 +55,30 @@
 									</div>
 									<div class="menu_wrapper">
 										<nav id="menu" class="menu-main-menu-container">
-                                            <ul id="menu-main-menu" class="menu">
-                                                <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-2 ">
-                                                    <a href="../../index.html"><span>Home</span></a>                                                </li>
+											<ul id="menu-main-menu" class="menu">
+                                                <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-2"><a href="../../index.html"><span>Inicio</span></a></li>
                                                 <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                    <a href="empresa.html"><span>Nuestra Empresa</span></a>                                               </li>
+                                                <a href="empresa.html"><span>Nuestra Empresa</span></a></li>
                                                 <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                    <a href="servicios.html"><span>Servicios</span></a>                                               </li>
+                                                    <a href="servicios.html"><span>Servicios</span></a>
+                                                    <ul>
+                                                        <li>
+                                                            <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#"><span>Informes Comerciales</span></a></li>
+                                                        </li>
+                                                        <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#"><span>Busqueda</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    
+                                                    
+                                                    </li>
                                                 <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current_page_item">
-                                                    <a href="#"><span>Contacto</span></a>                                              </li>
-                                                    <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#"><span>Ingreso Clientes</span></a></li>
-                                                    <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="content/tws/en/index.html"><span>Version Ingles</span></a></li>
+                                                    <a href="#"><span>Contacto</span></a></li>
+                                                <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#"><span>Ingreso Clientes</span></a></li>
+                                                
+                                                
+                                                <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="content/tws/en/index.html"><span>Version Ingles</span></a></li>
                                             </ul>
-                                        </nav><a class="responsive-menu-toggle " href="#"><i class="icon-menu"></i></a>
-									</div><div class="secondary_menu_wrapper"></div><div class="banner_wrapper"></div>
+										</nav><a class="responsive-menu-toggle " href="#"><i class="icon-menu"></i></a>									</div><div class="secondary_menu_wrapper"></div><div class="banner_wrapper"></div>
 									<div class="search_wrapper">
 										<form method="get" id="searchform" action="#">
 
@@ -121,7 +131,7 @@
 
 
 <div id="contactWrapper" >
-<form id="contactform">
+<form id="contactform" name="contactform" method="post" action="">
 <div class="column one-second">
 <input placeholder="Su Nombre" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
 </div>
@@ -153,7 +163,7 @@
 <input placeholder="Ciudad" type="text" name="ciudad" id="email" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one">
-<input type="button" value="Enviar Datos" id="submit" onClick="return check_values();">
+<input type="submit" value="Enviar Datos" id="submit" onClick="return check_values();">
 </div>
 </form>
 </div>

@@ -1,0 +1,100 @@
+<html>
+<style>
+	button			{width: 150px}
+	.botonMenuDespl 	{margin-left: 5px; width: 120px}
+	.AereosVisible		{visibility: "visible"; margin-bottom: -15px}
+	.AereosOculto		{visibility: "hidden"; margin-top: -190px}
+	.MarinosVisible		{visibility: "visible"; margin-bottom: -15px}
+	.MarinosOculto		{visibility: "hidden"; margin-top: -160px}
+	.TerrestresVisible	{visibility: "visible"; margin-bottom: -15px}
+	.TerrestresOculto	{visibility: "hidden"; margin-top: -130px}
+</style>
+ 
+<script>
+function Menu(id_Div,nombre) {
+	if(id_Div.className == nombre + "Oculto") {
+		id_Div.className = nombre + "Visible";
+	} else {
+		id_Div.className = nombre + "Oculto";
+	}
+}
+</script>
+ 
+<body>
+ 
+<button onclick="Menu(DivAereos, 'Aereos')">Vehículos aéreos</button><br>
+<div id=DivAereos class=AereosOculto>
+<br>
+<table cellspacing=0>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: #AAAAFF">»</span></td>
+	<td><button class=BotonMenuDespl>Transportes</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: #AAAAFF">»</span></td>
+	<td><button class=BotonMenuDespl>Deportivos</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: #AAAAFF">»</span></td>
+	<td><button class=BotonMenuDespl>Militares</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: #AAAAFF">»</span></td>
+	<td><button class=BotonMenuDespl>Helicópteros</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: #AAAAFF">»</span></td>
+	<td><button class=BotonMenuDespl>Planeadores</button></td>
+</tr>
+</table>
+ 
+</div>
+ 
+<br><br>
+ 
+<button onclick="Menu(DivMarinos, 'Marinos')">Vehículos marinos</button><br>
+<div id=DivMarinos class=MarinosOculto>
+<br>
+<table cellspacing=0>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: blue">»</span></td>
+	<td><button class=BotonMenuDespl>Petroleros</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: blue">»</span></td>
+	<td><button class=BotonMenuDespl>Areneros</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: blue">»</span></td>
+	<td><button class=BotonMenuDespl>Militares</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: blue">»</span></td>
+	<td><button class=BotonMenuDespl>Remolcadores</button></td>
+</tr>
+</table>
+</div>
+ 
+<br><br>
+ 
+<button onclick="Menu(DivTerrestres, 'Terrestres')">Vehículos terrestres</button><br>
+<div id=DivTerrestres class=TerrestresOculto>
+<br>
+<table cellspacing=0>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: brown">»</span></td>
+	<td><button class=BotonMenuDespl>Automóviles</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: brown">»</span></td>
+	<td><button class=BotonMenuDespl>Ómnibus</button></td>
+</tr>
+<tr>
+	<td><span style="font: 15pt comic sans ms; color: brown">»</span></td>
+	<td><button class=BotonMenuDespl>Motocicletas</button></td>
+</tr>
+</table>
+</div>
+ 
+</body>
+</html>
