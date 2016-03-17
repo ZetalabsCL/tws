@@ -2509,6 +2509,7 @@ body.header-stack:not(.template-slider) #Header {
 }
 
 #Subheader .title {
+    text-shadow: 0.1em 0.1em 0.05em #333;
     margin-bottom: 0;
     width: 70%;
     float: left;
@@ -8494,11 +8495,11 @@ blockquote {
     color: rgba(255, 255, 255, 1.00);
     font-size: 54px;
     line-height: 70px;
-    font-weight: 900;
+    font-weight: 400;
     font-style: normal;
-    font-family: Playfair Display;
     padding: 0px 0px 0px 0px;
     text-decoration: none;
+    text-shadow: 0.1em 0.1em 0.05em #333;
     text-align: center;
     background-color: transparent;
     border-color: transparent;
