@@ -2780,7 +2780,7 @@ body.layout-boxed .vc_row-no-padding .wpb_column { padding:0;}
 	input[type="text"],
 	input[type="url"],
 	select,
-	textarea { padding: 10px 10px; outline: none; margin: 0; width: 230px; max-width: 100%; display: block; margin-bottom: 20px; font-size: 13px; border-width: 1px; border-style: solid; border-radius: 0;
+	textarea { padding: 10px 10px; outline: none; margin: 0; max-width: 100%; display: block; margin-bottom: 20px; font-size: 13px; border-width: 1px; border-style: solid; border-radius: 0;
 		box-sizing: border-box; -webkit-appearance: none;
 	}
 
@@ -6923,4 +6923,6 @@ p.flv_align_right,div.flv_align_right{text-align: right;}
     color: #0EA4A2;
     
 }
+
+
 
