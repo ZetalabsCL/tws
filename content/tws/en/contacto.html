@@ -19,7 +19,7 @@
 
  <!-- Favicons
  ================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="shortcut icon" href="../images/favicon.ico">
 
 		<!-- FONTS
  ================================================== -->
@@ -50,24 +50,35 @@
 							<div class="column one">
 								<div class="top_bar_left clearfix">
 									<div class="logo">
-										<a id="logo" href="../../../index-business2.html" title="Transworld Services">
+										<a id="logo" href="../../index.html" title="Transworld Services">
 										<img class="scale-with-grid" src="../images/business2.png" 	alt="Transworld Services" /></a>
 									</div>
 									<div class="menu_wrapper">
 										<nav id="menu" class="menu-main-menu-container">
-                                            <ul id="menu-main-menu" class="menu">
-                                                <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-2 ">
-                                                    <a href="index-business2.html"><span>Home</span></a>                                                </li>
+											<ul id="menu-main-menu" class="menu">
+                                                <li id="menu-item-5" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-2"><a href="index.html"><span>Home</span></a></li>
                                                 <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                    <a href="empresa.html"><span>Our Company</span></a>                                               </li>
+                                                <a href="empresa.html"><span>Our Company</span></a></li>
                                                 <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page">
-                                                    <a href="servicios.html"><span>Services</span></a>                                               </li>
+                                                    <a href="servicios.html"><span>Services</span></a>
+                                                    <ul>
+                                                        <li>
+                                                            <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="srvInfCo.html"><span>Commercial Reports</span></a></li>
+                                                        </li>
+                                                        <li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="srvBusc.html"><span>Serch</span></a>
+                                                        </li>
+                                                    </ul>
+                                                    
+                                                    
+                                                    </li>
                                                 <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current_page_item">
-                                                    <a href="#"><span>Contact Us</span></a>                                              </li>
-                                                    <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="#"><span>Customers Login</span></a></li>
+                                                    <a href="#"><span>Contact Us</span></a></li>
+                                                <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="ingCli.html"><span>Customers LogIn</span></a></li>
+                                                
+                                                
+                                                <li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="../../../index.html"><span>Spanish Version</span></a></li>
                                             </ul>
-                                        </nav><a class="responsive-menu-toggle " href="#"><i class="icon-menu"></i></a>
-									</div><div class="secondary_menu_wrapper"></div><div class="banner_wrapper"></div>
+										</nav><a class="responsive-menu-toggle " href="#"><i class="icon-menu"></i></a>									</div><div class="secondary_menu_wrapper"></div><div class="banner_wrapper"></div>
 									<div class="search_wrapper">
 										<form method="get" id="searchform" action="#">
 
@@ -112,7 +123,7 @@
 									<div class="wrap mcb-wrap one clearfix" style="padding:; background-color:" >
 										<div class="column mcb-column two-third column_column column-margin-">
 											<div class="column_attr" >
-												<h3>Contact Us</h3>
+												<h3>Escribanos</h3>
 												<hr class="no_line hrmargin_b_30"/>
 												<div role="form" class="wpcf7" id="wpcf7-f35-p16-o1" lang="en-US" dir="ltr">
 													<div class="screen-reader-response"></div>
@@ -120,12 +131,12 @@
 
 
 <div id="contactWrapper" >
-<form id="contactform">
+<form id="contactform" name="contactform" method="post" action="">
 <div class="column one-second">
-<input placeholder="Your Name" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Su Nombre" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one-second">
-<input placeholder="Your Company" type="text" name="company" id="email" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Su Compañia" type="text" name="company" id="email" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one-second">
 <input placeholder="Su Rut" type="text" name="rut" id="rut" size="40" aria-required="true" aria-invalid="false" />
@@ -152,7 +163,7 @@
 <input placeholder="Ciudad" type="text" name="ciudad" id="email" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one">
-<input type="button" value="Enviar Datos" id="submit" onClick="return check_values();">
+<input type="submit" value="Enviar Datos" id="submit" onClick="return check_values();">
 </div>
 </form>
 </div>
@@ -431,15 +442,15 @@
 					var retinaEl = jQuery("#logo img.logo-main");
 					var retinaLogoW = retinaEl.width();
 					var retinaLogoH = retinaEl.height();
-					retinaEl.attr("src", "../images/retina-business2.png").width(retinaLogoW).height(retinaLogoH);
+					retinaEl.attr("src", "images/retina-business2.png").width(retinaLogoW).height(retinaLogoH);
 					var stickyEl = jQuery("#logo img.logo-sticky");
 					var stickyLogoW = stickyEl.width();
 					var stickyLogoH = stickyEl.height();
-					stickyEl.attr("src", "../images/retina-business2.png").width(stickyLogoW).height(stickyLogoH);
+					stickyEl.attr("src", "images/retina-business2.png").width(stickyLogoW).height(stickyLogoH);
 					var mobileEl = jQuery("#logo img.logo-mobile");
 					var mobileLogoW = mobileEl.width();
 					var mobileLogoH = mobileEl.height();
-					mobileEl.attr("src", "../images/retina-business2.png").width(mobileLogoW).height(mobileLogoH);
+					mobileEl.attr("src", "images/retina-business2.png").width(mobileLogoW).height(mobileLogoH);
 				}
 			});
 		</script>
