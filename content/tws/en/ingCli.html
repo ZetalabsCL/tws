@@ -116,18 +116,18 @@
 
 
 <div id="contactWrapper" >
-<form id="contactform" name="contactform" method="post" action="">
+<form id="contactform" name="contactform">
 <div class="column four-fifth">
-<input placeholder="Cliente" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Customer" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column four-fifth">
-<input placeholder="Usuario" type="text" name="company" id="email" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="User" type="text" name="company" id="email" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column four-fifth">
-<input placeholder="Password" type="password" name="rut" id="rut" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Password" type="password" name="pass" id="pass" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one">
-<input type="submit" value="Enviar Datos" style="width:300px;" id="" onClick="return check_values();">
+<input type="button" value="Enviar Datos" style="width:300px;" id="flag" onClick="return check_values();">
 </div>
 </form>
 </div>
@@ -373,6 +373,31 @@
 				}
 			});
 		</script>
+		<script>
+            function check_values(){
+                var n,e,p;
+                n = document.getElementById("name").value;
+                e = document.getElementById("email").value;
+                p = document.getElementById("pass").value;
+                if(n==""){
+                    alert("Debe ingresar un Nombre");
+                    document.contactform.name.focus();
+                }
+                else if(e==""){
+                    alert("Debe ingresar Usuario");
+                    document.contactform.email.focus()
+                }
+                else if(p==""){
+                    alert("Debe ingresar password");
+                    document.contactform.pass.focus()
+                }
+                else{
+                    document.contactform.submit();
+                }
+            }
+
+            
+        </script>
 
 </body>
 </html>
