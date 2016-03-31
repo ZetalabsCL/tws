@@ -116,18 +116,18 @@
 
 
 <div id="contactWrapper" >
-<form id="contactform" name="contactform" method="post" action="">
+<form id="contactform" name="contactform">
 <div class="column four-fifth">
 <input placeholder="Cliente" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column four-fifth">
-<input placeholder="Usuario" type="text" name="company" id="email" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Usuario" type="text" name="usuario" id="usuario" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column four-fifth">
-<input placeholder="Password" type="password" name="rut" id="rut" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Contraseña" type="password" name="pass" id="pass" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one">
-<input type="submit" value="Enviar Datos" style="width:300px;" id="" onClick="return check_values();">
+<input type="button" value="Enviar Datos" style="width:300px;" id="" onClick="return check_values();">
 </div>
 </form>
 </div>
@@ -354,6 +354,31 @@
 													google_maps_564f402c6e5ab();
 												});
 											</script>
+											<script>
+            function check_values(){
+                var n,e,p;
+                n = document.getElementById("name").value;
+                e = document.getElementById("usuario").value;
+                p = document.getElementById("pass").value;
+                if(n==""){
+                    alert("Por favor ingrese un Nombre");
+                    document.contactform.name.focus();
+                }
+                else if(e==""){
+                    alert("Por favor ingrese un Uruario");
+                    document.contactform.usuario.focus()
+                }
+                else if(p==""){
+                    alert("Por favor ingrese una Contraseña");
+                    document.contactform.pass.focus()
+                }
+                else{
+                    document.contactform.submit();
+                }
+            }
+
+            
+        </script>
 <script>
 			jQuery(window).load(function() {
 				var retina = window.devicePixelRatio > 1 ? true : false;

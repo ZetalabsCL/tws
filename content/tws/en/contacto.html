@@ -131,18 +131,18 @@
 
 
 <div id="contactWrapper" >
-<form id="contactform" name="contactform" method="post" action="">
+<form id="contactform" name="contactform">
 <div class="column one-second">
 <input placeholder="Name" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one-second">
-<input placeholder="Company" type="text" name="company" id="email" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Company" type="text" name="company" id="company" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one-second">
-<input placeholder="ID" type="text" name="rut" id="rut" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="ID" type="text" name="id" id="id" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one-second">
-<input placeholder="Company ID" type="text" name="rut-company" id="email" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Company ID" type="text" name="idcom" id="idcom" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one-second">
 <input placeholder="Position" type="text" name="cargo" id="cargo" size="40" aria-required="true" aria-invalid="false" />
@@ -160,10 +160,10 @@
 <input placeholder="Phone" type="text" name="telefono" id="telefono" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one-second">
-<input placeholder="City" type="text" name="ciudad" id="email" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="City" type="text" name="ciudad" id="ciudad" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one">
-<input type="submit" value="Send" id="submit" onClick="return check_values();">
+<input type="Button" value="Send" id="send" onClick="return check_values();">
 </div>
 </form>
 </div>
@@ -177,7 +177,7 @@
 													Contact us, we have the information your company needs
 												</p>
 												<hr class="no_line hrmargin_b_30"/>
-												<div style="padding: 0 0 0 80px; background: url(images/home_business2_pin_small.png) no-repeat left top;">
+												<div style="padding: 0 0 0 80px; background: url(../images/home_business2_pin_small.png) no-repeat left top;">
 													<h4 class="hrmargin_b_7">Transworld Services S.A.</h4>
 													<p>
 														Puerta del Sol #055 Oficina 81, Las Condes. Santiago, Chile
@@ -271,7 +271,7 @@
                         <div class="column one">
                             <a id="back_to_top" class="button button_left button_js " href="#"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>
                             <div class="copyright">
-                                Casa Matriz: Puerta del Sol 55 Of. 81, Las Condes, Santiago, Chile | Fono:(56)227539900 Fax: 227539902 | &copy; 2016 Tws Chile - <a rel="nofollow" href="#">TransWorld Services</a>
+                                HeadQuarter: Puerta del Sol 55 Of. 81, Las Condes, Santiago, Chile | Phone:(56)227539900 Fax: 227539902 | &copy; 2016 Tws Chile - <a rel="nofollow" href="#">TransWorld Services</a>
                             </div><ul class="social"></ul>
                         </div>
                     </div>
@@ -429,7 +429,7 @@
 													var map = new google.maps.Map(document.getElementById("google-map-area-564f402c6e5ab"), myOptions);
 													var marker = new google.maps.Marker({
 														position : latlng,
-														icon : "images/home_business2_pin.png",
+														icon : "../images/home_business2_pin.png",
 														map : map
 													});
 												}
@@ -437,6 +437,68 @@
 													google_maps_564f402c6e5ab();
 												});
 											</script>
+											<script>
+            function check_values(){
+                var na,co,id,ic,ca,fx,em,pa,fo,ci;
+                na = document.getElementById("name").value;
+                co = document.getElementById("company").value;
+                id = document.getElementById("id").value;
+                ic = document.getElementById("idcom").value;
+                ca = document.getElementById("cargo").value;
+                fx = document.getElementById("fax").value;
+                em = document.getElementById("email").value;
+                pa = document.getElementById("pais").value;
+                fo = document.getElementById("telefono").value;
+                ci = document.getElementById("ciudad").value;
+                    
+                
+                if(na==""){
+                    alert("Please introduce Name");
+                    document.contactform.name.focus();
+                }
+                else if(co==""){
+                    alert("Please introduce Company");
+                    document.contactform.company.focus()
+                }
+                else if(id==""){
+                    alert("Please introduce an ID");
+                    document.contactform.id.focus()
+                }
+                else if(ic==""){
+                    alert("Please introduce a Company ID");
+                    document.contactform.idcom.focus()
+                }
+                else if(ca==""){
+                    alert("Please introduce a Position");
+                    document.contactform.cargo.focus()
+                }
+                else if(fx==""){
+                    alert("Please introduce a Fax Number");
+                    document.contactform.fax.focus()
+                }
+                else if(em==""){
+                    alert("Please introduce an E-Mail");
+                    document.contactform.email.focus()
+                }
+                else if(pa==""){
+                    alert("Please introduce a Country");
+                    document.contactform.pais.focus()
+                }
+                else if(fo==""){
+                    alert("Please introduce a Phone Number");
+                    document.contactform.telefono.focus()
+                }else if(ci==""){
+                    alert("Please introduce a City Name");
+                    document.contactform.ciudad.focus()
+                }
+                else{
+                    document.contactform.submit();
+                }
+            }
+
+            
+        </script>
+											
 <script>
 			jQuery(window).load(function() {
 				var retina = window.devicePixelRatio > 1 ? true : false;
@@ -444,15 +506,15 @@
 					var retinaEl = jQuery("#logo img.logo-main");
 					var retinaLogoW = retinaEl.width();
 					var retinaLogoH = retinaEl.height();
-					retinaEl.attr("src", "images/retina-business2.png").width(retinaLogoW).height(retinaLogoH);
+					retinaEl.attr("src", "../images/retina-business2.png").width(retinaLogoW).height(retinaLogoH);
 					var stickyEl = jQuery("#logo img.logo-sticky");
 					var stickyLogoW = stickyEl.width();
 					var stickyLogoH = stickyEl.height();
-					stickyEl.attr("src", "images/retina-business2.png").width(stickyLogoW).height(stickyLogoH);
+					stickyEl.attr("src", "../images/retina-business2.png").width(stickyLogoW).height(stickyLogoH);
 					var mobileEl = jQuery("#logo img.logo-mobile");
 					var mobileLogoW = mobileEl.width();
 					var mobileLogoH = mobileEl.height();
-					mobileEl.attr("src", "images/retina-business2.png").width(mobileLogoW).height(mobileLogoH);
+					mobileEl.attr("src", "../images/retina-business2.png").width(mobileLogoW).height(mobileLogoH);
 				}
 			});
 		</script>
