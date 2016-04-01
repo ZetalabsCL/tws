@@ -377,18 +377,18 @@
             function check_values(){
                 var n,e,p;
                 n = document.getElementById("name").value;
-                e = document.getElementById("email").value;
+                e = document.getElementById("usuario").value;
                 p = document.getElementById("pass").value;
-                if(n==""){
-                    alert("Please introduce a Name");
+                if(n==""){                    
+	               alert("Por favor ingrese un Nombre");
                     document.contactform.name.focus();
                 }
                 else if(e==""){
-                    alert("Please Introduce an E-Mail");
-                    document.contactform.email.focus()
+                    alert("Por favor ingrese un Uruario");
+                    document.contactform.usuario.focus()
                 }
                 else if(p==""){
-                    alert("Please Introduce a Password");
+                    alert("Por favor ingrese una Contraseña");
                     document.contactform.pass.focus()
                 }
                 else{

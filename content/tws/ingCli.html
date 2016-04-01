@@ -36,6 +36,8 @@
 		<link rel='stylesheet' id='style-css' href='css/style.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='local-css' href='css/business2.css' type='text/css' media='all' />
 		<link rel='stylesheet' id='custom-css' href='css/custom.css' type='text/css' media='all' />
+		<script src="dist/sweetalert.min.js"></script> 
+		<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
 
 
 
@@ -119,6 +121,7 @@
 <form id="contactform" name="contactform">
 <div class="column four-fifth">
 <input placeholder="Cliente" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
+<label name="nom" id="nom"></label>
 </div>
 <div class="column four-fifth">
 <input placeholder="Usuario" type="text" name="usuario" id="usuario" size="40" aria-required="true" aria-invalid="false" />
@@ -361,18 +364,20 @@
                 e = document.getElementById("usuario").value;
                 p = document.getElementById("pass").value;
                 if(n==""){
-                    alert("Por favor ingrese un Nombre");
+                    function(){
+	                   document.getElementById("nom").value = "Johnny Bravo";
                     document.contactform.name.focus();
                 }
                 else if(e==""){
-                    alert("Por favor ingrese un Uruario");
+                    swal("Por favor ingrese un Uruario");
                     document.contactform.usuario.focus()
                 }
                 else if(p==""){
-                    alert("Por favor ingrese una Contraseña");
+                    swal("Por favor ingrese una Contraseña");
                     document.contactform.pass.focus()
                 }
                 else{
+                    
                     document.contactform.submit();
                 }
             }
