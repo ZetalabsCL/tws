@@ -124,13 +124,13 @@
 <label name="nom" id="nom"></label>
 </div>
 <div class="column four-fifth">
-<input placeholder="Usuario" type="text" name="usuario" id="usuario" size="40" aria-required="true" aria-invalid="false" />
+<input placeholder="Usuario" type="text" name="user" id="user" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column four-fifth">
 <input placeholder="Contraseña" type="password" name="pass" id="pass" size="40" aria-required="true" aria-invalid="false" />
 </div>
 <div class="column one">
-<input type="button" value="Enviar Datos" style="width:300px;" id="" onClick="return check_values();">
+<input type="button" value="Enviar Datos" style="width:300px;" id="" onClick="return Validar();">
 </div>
 </form>
 </div>
@@ -141,13 +141,13 @@
 											<div class="column_attr" >
 												<h3>Nuestra direccion</h3>
 												<p class="big">
-													Contactenos, tenemos la informacion que su empresa necesita
+													Contáctenos, tenemos la información que su empresa necesita
 												</p>
 												<hr class="no_line hrmargin_b_30"/>
 												<div style="padding: 0 0 0 80px; background: url(images/home_business2_pin_small.png) no-repeat left top;">
 													<h4 class="hrmargin_b_7">Transworld Services S.A.</h4>
 													<p>
-														Puerta del Sol #055 Oficina 81, Las Condes. Santiago, Chile
+														Puerta del Sol 55 Oficina 81, Las Condes. Santiago, Chile
 													</p>
 													<p class="big hrmargin_b_5" >
 														<a href="#">+562 2753 9900</a>
@@ -166,9 +166,8 @@
 									<div class="wrap mcb-wrap one clearfix" style="padding:; background-color:" >
 										<div class="column mcb-column one column_column column-margin-">
 											<div class="column_attr align_center" >
-                                                <h2 style="color: #fff;">Necesita mas Informacion?
-                                                <br />
-                                                Contacte a un ejecutivo comercial</h2>
+                                                <h2 style="color: #fff;">Necesita mas Información?
+                                                </h2>
                                                 <hr class="no_line hrmargin_b_40" />
                                                 <a class="button button_theme button_js" href="contacto.html" ><span class="button_label">Contactenos </span></a>
                                             </div>
@@ -191,7 +190,7 @@
                         <div class="column one">
                             <a id="back_to_top" class="button button_left button_js " href="#"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>
                             <div class="copyright">
-                                Casa Matriz: Puerta del Sol 55 Of. 81, Las Condes, Santiago, Chile | Fono:(56)227539900 Fax: 227539902 | &copy; 2016 Tws Chile - <a rel="nofollow" href="#">TransWorld Services</a>
+                                Casa Matriz: Puerta del Sol 55 Of. 81, Las Condes, Santiago, Chile | Fono:(56)227539900 | &copy; 2016 Tws Chile - <a rel="nofollow" href="#">TransWorld Services S.A</a>
                             </div><ul class="social"></ul>
                         </div>
                     </div>
@@ -384,6 +383,39 @@
 
             
         </script>
+        <script>
+    function Validar(){
+        var vjs = jQuery.noConflict();
+        if(!document.contactform.name.value || document.contactform.name.value == null){
+            vjs('#contactform #name').parent().find(".error").remove();
+            vjs('#contactform #user').parent().find(".error").remove();
+            vjs('#contactform #pass').parent().find(".error").remove();
+            vjs("#contactform #name").parent().append("<label for='contactname' generated='true' class='error'>Por Favor Ingrese su Nombre</label>");
+            document.contactform.name.focus();
+        }
+        else if(!document.contactform.user.value || document.contactform.user.value == null){
+            vjs('#contactform #name').parent().find(".error").remove();
+            vjs('#contactform #user').parent().find(".error").remove();
+            vjs('#contactform #pass').parent().find(".error").remove();
+            vjs("#contactform #user").parent().append("<label for='contactname' generated='true' class='error'>Por Favor Ingrse su Nombre de Usuario</label>");
+            document.contactform.user.focus();
+        }
+        else if(!document.contactform.pass.value || document.contactform.pass.value == null){
+            vjs('#contactform #name').parent().find(".error").remove();
+            vjs('#contactform #user').parent().find(".error").remove();
+            vjs('#contactform #pass').parent().find(".error").remove();
+            vjs("#contactform #pass").parent().append("<label for='contactname' generated='true' class='error'>Por Favor Ingrese su Contraseña</label>");
+            document.contactform.pass.focus();
+        }
+        else{
+            vjs('#contactform #name').parent().find(".error").remove();
+            vjs('#contactform #user').parent().find(".error").remove();
+            vjs('#contactform #pass').parent().find(".error").remove();
+            document.contactform.submit();
+        }
+    }
+
+</script>
 <script>
 			jQuery(window).load(function() {
 				var retina = window.devicePixelRatio > 1 ? true : false;
